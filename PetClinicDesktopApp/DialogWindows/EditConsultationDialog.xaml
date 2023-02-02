@@ -1,0 +1,34 @@
+﻿<Window x:Class="PetClinicDesktopApp.DialogWindows.EditConsultationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetClinicDesktopApp.DialogWindows"
+        mc:Ignorable="d"
+        Title="Редактирование консультации" Height="290" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SaveConsultationButton" IsCancel="True" Grid.Column="1" Content="Ок" HorizontalAlignment="Center" 
+                Margin="0,20,0,0" VerticalAlignment="Top" Width="74" Click="SaveConsultationButton_Click" />
+        <Button x:Name="CancelConsultationButton" IsCancel="True" Grid.Column="1" Content="Отмена" HorizontalAlignment="Center" 
+                Margin="0,50,0,0" VerticalAlignment="Top" Width="74" />
+        <StackPanel Grid.Column="0">
+            <Label Content="Клиент" HorizontalAlignment="Left" />
+            <Label x:Name="ClientNameLabel" HorizontalAlignment="Left" FontWeight="Bold" />
+            <Label Content="Питомец" HorizontalAlignment="Left" />
+            <Label x:Name="PetNameLabel" HorizontalAlignment="Left" FontWeight="Bold" />
+            <Label Content="Дата консультации" HorizontalAlignment="Left" />
+            <DatePicker x:Name="ConsultationDatePicker" HorizontalAlignment="Left" />
+            <Label Content="Комментарий" HorizontalAlignment="Left" />
+            <TextBox x:Name="ConsultationCommentTextBox" TextWrapping="Wrap" Text="Комментарий..." 
+                     Width="200" Height="45" HorizontalAlignment="Left" />
+        </StackPanel>
+
+    </Grid>
+</Window>
